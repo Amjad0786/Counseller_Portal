@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amjad Tech - Login</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .navbar {
+        background-color: #007bff !important;
+        padding: 1rem;
+    }
+
+    .navbar .navbar-brand, .navbar-nav .nav-link {
+        color: #fff !important;
+        font-weight: 600;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+        color: #ffd700 !important;
+    }
+
+    .container, .table {
+        margin-top: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    h1 {
+        color: #007bff;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    table th, table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .login-container, .register-container {
+        max-width: 400px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .table {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+
+    .table tbody tr {
+        transition: transform 0.3s ease;
+    }
+
+    .table tbody tr:hover {
+        transform: scale(1.02);
+    }
+
+    a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+</style>
+
+
+</head>
+<body>
+	<div class="login-container">
+		<h1>Login Here</h1>
+
+		<font style="color: red;"></font>
+		<!-- Display the error message -->
+		<p th:text="${emsg}"></p>
+
+		<form th:action="@{/login}" th:object="${counsellor}" method="post">
+
+			<table>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" th:field="*{email}" required></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" th:field="*{pwd}" required></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Login" class="btn btn-primary"></td>
+				</tr>
+			</table>
+
+		</form>
+			<a href="register">Create New Account</a>
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+</html>

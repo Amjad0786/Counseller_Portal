@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: 09-Counsellor_Portal_App
+  datasource:
+    url: jdbc:mysql://localhost:3306/jrtp28
+    username: root
+    password: amjadkhan@16
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+   hibernate:
+    ddl-auto: update
+   show-sql: true
