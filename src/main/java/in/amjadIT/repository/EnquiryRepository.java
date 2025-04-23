@@ -10,4 +10,9 @@ public interface EnquiryRepository extends JpaRepository<EnquiryEntity, Integer>
 
 	//select * from enq_tbl where counsellor_Id= Id;
 	public List<EnquiryEntity> findByCounsellorCounsellorId(Integer counsellorId);
-}
+	
+	
+	
+	}
+
+

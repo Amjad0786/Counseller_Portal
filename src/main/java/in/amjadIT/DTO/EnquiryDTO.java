@@ -11,6 +11,7 @@ public class EnquiryDTO {
 	private String classMode;
 	private String course;
 	private String enqStatus;
+	
 	public Integer getEnqId() {
 		return enqId;
 	}

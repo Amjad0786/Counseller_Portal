@@ -2,7 +2,7 @@ spring:
   application:
     name: 09-Counsellor_Portal_App
   datasource:
-    url: jdbc:mysql://localhost:3306/jrtp28
+    url: jdbc:mysql://localhost:3306/CounsellorData
     username: root
     password: amjadkhan@16
     driver-class-name: com.mysql.cj.jdbc.Driver

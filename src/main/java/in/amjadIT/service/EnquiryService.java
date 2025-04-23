@@ -17,5 +17,10 @@ public interface EnquiryService {
 	public List<EnquiryDTO> getEnquiries(EnqFilterDTO filterDTO, Integer counsellorId);
 
 	public EnquiryDTO getEnquiryById(Integer enqId);
+	
+
+	
+	
+
 
 }
